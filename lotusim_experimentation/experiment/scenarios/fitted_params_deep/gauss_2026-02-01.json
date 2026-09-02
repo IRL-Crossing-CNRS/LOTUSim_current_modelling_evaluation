@@ -1,0 +1,12 @@
+{
+  "date": "2026-02-01",
+  "source_profile": "copernicus_profiles_deep/brest_2026-02-01.csv",
+  "fitted": {
+    "mean_x": -0.021832,
+    "mean_y": 0.042516,
+    "std_dev": 0.029547,
+    "tau": 60.0
+  },
+  "n_depth_samples": 24,
+  "_comment": "mean_x/mean_y: plain (unweighted) mean of the measured profile over 0-150 m, the same band and sample set Ekman is fitted on. std_dev: RMSE of that mean against the profile -- a SPATIAL variability proxy, not the OU process's temporal variance (see this script's module docstring). tau left at 60 s, unfit."
+}

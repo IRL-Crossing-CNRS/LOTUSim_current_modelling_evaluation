@@ -1,0 +1,11 @@
+{
+  "date": "2026-07-07",
+  "source_profile": "copernicus_profiles/brest_2026-07-07.csv",
+  "fitted": {
+    "mean_x": 0.05513,
+    "mean_y": 0.043742,
+    "std_dev": 0.016165,
+    "tau": 60.0
+  },
+  "_comment": "mean_x/mean_y: depth-weighted mean of the measured profile (0-65 m). std_dev: depth-weighted RMS deviation from that mean, pooled isotropically -- a SPATIAL variability proxy, not the OU process's temporal variance (see fit_gauss_markov_profile.py docstring). tau left at 60 s, unfit."
+}

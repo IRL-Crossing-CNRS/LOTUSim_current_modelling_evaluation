@@ -1,0 +1,10 @@
+{
+  "date": "2026-02-03",
+  "source_profile": "copernicus_profiles_deep/brest_2026-02-03.csv",
+  "fitted": {
+    "mean_x": 0.037601,
+    "mean_y": 0.105655,
+    "std_dev": 0.040146
+  },
+  "_comment": "Best depth-uniform current over the same 0-150 m band."
+}

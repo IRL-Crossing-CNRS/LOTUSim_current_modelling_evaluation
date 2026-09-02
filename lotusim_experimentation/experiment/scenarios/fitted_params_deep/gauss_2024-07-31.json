@@ -1,0 +1,10 @@
+{
+  "date": "2024-07-31",
+  "source_profile": "copernicus_profiles_deep/brest_2024-07-31.csv",
+  "fitted": {
+    "mean_x": -0.009279,
+    "mean_y": 0.054114,
+    "std_dev": 0.028949
+  },
+  "_comment": "Best depth-uniform current over the same 0-150 m band as the Ekman fit."
+}

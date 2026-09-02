@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# LaTeX / report build artifacts
+*.aux
+*.log
+
+.claude/

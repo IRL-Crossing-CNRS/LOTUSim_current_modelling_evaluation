@@ -1,0 +1,22 @@
+{
+  "date": "2025-06-17",
+  "source_profile": "copernicus_profiles_deep/brest_2025-06-17.csv",
+  "fitted": {
+    "current_velocity_ms": 0.0331,
+    "current_orientation_deg": 62.52,
+    "top_layer_thickness_m": 97.999,
+    "bottom_layer_thickness_m": 42.846,
+    "U10_ms": 3.5494
+  },
+  "held_fixed": {
+    "seabed_depth_m": 196.0,
+    "latitude_deg": 47.0,
+    "wind_orientation_deg": 20.0
+  },
+  "fit_rmse_ms": 0.01987,
+  "railed_parameters": [
+    "top_layer_thickness_m"
+  ],
+  "n_depth_samples": 24,
+  "_comment": "Fitted over the 0-150 m band, matching the Gauss-Markov fit."
+}

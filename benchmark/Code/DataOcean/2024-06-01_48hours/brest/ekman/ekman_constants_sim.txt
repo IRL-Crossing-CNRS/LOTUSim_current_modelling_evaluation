@@ -1,0 +1,78 @@
+Constants:
+    # PHYSICS CONSTANTS
+    G: float = 9.81               # Gravity acceleration [m/s^2]
+    RhoAir: float = 1.225         # Air density [kg/m^3]
+    RhoWater: float = 1026        # Ocean water density [kg/m^3]
+    Karman: float = 0.41          # Karman constant (dimensionless)
+    NuE: float = 1e-3             # Eddy Viscosity [m^2/s]
+    Omega: float = 7.2921e-5      # Earth rotation frequency [rad/s]
+    
+
+    # In situ Data
+    inSituCurrentFile = Path(__file__).parent.parent.parent.parent / "benchmark/Code/DataOcean/2024-06-01_48hours/brest/copernicus/uwCurrent_cart.csv"
+
+    # bathy
+    bathyFile: str = Path(__file__).parent.parent.parent.parent / "benchmark/Code/DataOcean/2024-06-01_48hours/brest/copernicus/bathy_cart.csv"
+
+    # output file 
+    outputFile = Path(__file__).parent.parent.parent.parent / "benchmark/Code/DataOcean/2024-06-01_48hours/brest/ekman/uwCurrent_output_cart.csv"
+
+    # output file 
+    outputMeanFile = Path(__file__).parent.parent.parent.parent / "benchmark/Code/DataOcean/2024-06-01_48hours/brest/ekman/mean_uwCurrent_output_cart.csv"
+
+    # MODELS
+    currentModelName: str = 'ekman'  # Current model name
+    WaveModelName: str = 'Airy'      # Wave model name
+
+    # BROAD CURRENT EKMAN PARAMETERS
+    currentMeanU: float = 0.0718478547744093   # Current mean velocity in U direction [m/s]
+    currentMeanV: float = -0.057712125276342854   # Current mean velocity in V direction [m/s]
+    currentMeanW: float = 0.0     # Current mean velocity in W direction [m/s]
+    
+    # ISSC, DNRVP PARAMETERS
+    Vt0: float = 1                # Mean tidal velocity at the surface [m/s]
+    d0: float = 50                # Reference depth for the wind-generated current [m]
+    Wt0: float = 0.5              # Mean current velocity in surface [m/s]
+    
+    # NOC PARAMETERS
+    z_ob: float = 0.1             # Mean tidal velocity at the surface [m/s]
+    nocDelta: float = 10          # Reference depth for the wind-generated current [m]
+
+    # GAUSS-MARKOV PARAMETERS
+    noiseU: float = 0.01          # Noise in U velocity
+    noiseV: float = 0.01          # Noise in V velocity
+    noiseW: float = 0.01          # Noise in W velocity
+    muGM: float = 0.0             # Mean of Gauss-Markov process
+
+    # BROAD WIND PARAMETERS
+    v_north: float = -6.185972222222222     # Wind speed in north direction [m/s]
+    v_east: float = -3.261805555555556      # Wind speed in east direction [m/s]
+    U10: float = 6.99             # Wind speed at 10 meters height [m/s]
+    WindZ0: float = 0.02          # Wind roughness length [m]
+    windAngle: float = 207        # Wind Angle [degree]
+
+    # INTERPOLATION METHODS
+    BottomMethod: str = 'linear'  # Method for bottom interpolation {'linear', 'nearest', 'cubic'}
+    TopMethod: str = 'linear'     # Method for top interpolation {'linear', 'nearest', 'cubic'}
+
+    # METOCEAN
+    Lat: float = 46.8            # Latitude (Phi) [deg]
+    SurfaceHeight: float = 4850  # Water surface mean level [m]
+    BeaufortCode: int = 4             # Beaufort sea state code
+    swellCode: int = 4                # Swell code
+    seaStateCode: int = 4            # Sea state code
+    Rb: float = 0.02                 # Richardson number (stability)
+    mixingParameter: float = 0.4      # Mixing parameter
+
+    # AIRY SURFACE DISCRETIZATION
+    OmegaMin: float = 0.1            # Minimum angular frequency [rad/s]
+    OmegaMax: float = 3.0            # Maximum angular frequency [rad/s]
+    NFreq: int = 100                 # Number of frequency components
+    NDir: int = 50                   # Number of directional components
+    EqualEnergyBins: bool = True     # Use equal energy bins for discretization
+
+    # AIRY PARAMETERS
+    ConstantRandomPhase: bool = False  # Use constant or random phase
+    Psi0: float = 207.0               # Principal orientation [deg]
+    S: float = 10.0                   # Spreading parameter
+

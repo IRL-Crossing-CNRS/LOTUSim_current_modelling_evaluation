@@ -1,0 +1,10 @@
+{
+  "date": "2026-01-24",
+  "source_profile": "copernicus_profiles_deep/brest_2026-01-24.csv",
+  "fitted": {
+    "mean_x": -0.01291,
+    "mean_y": 0.079732,
+    "std_dev": 0.037515
+  },
+  "_comment": "Best depth-uniform current over the same 0-150 m band the Ekman model is fitted on. Fitting it over the full 0-902 m column instead would saddle it with the deep flow's different direction, and it would then lose for a reason unrelated to depth resolution."
+}
