@@ -1,0 +1,16 @@
+# VSCode
+.vscode/
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# LaTeX / report build artifacts
+*.aux
+*.log
+
+.claude/
+
+# Local archive of the two earlier study designs, kept out of the published
+# repository: no current result depends on it.
+appendix/

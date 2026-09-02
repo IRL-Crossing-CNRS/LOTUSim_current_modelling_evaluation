@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<!--
+
+  Example showing various marine plugins working together for an
+  Autonomous Underwater Vehicle (AUV).
+
+  The following plugins are used:
+
+  * Buoyancy: applies buoyancy forces
+  * JointPositionController: controls the vertical and horizontal fins
+  * LiftDrag: generates forces on the vertical and horizontal fins
+  * Thruster: propels the vehicle
+  * Hydrodynamics: applies forces such as added mass, drag and coriolis
+
+  Example commands for the vehicle to move in a circle:
+
+  1. Move the rudder:
+
+      gz topic -t /model/tethys/joint/vertical_fins_joint/0/cmd_pos \
+         -m gz.msgs.Double -p 'data: -0.17'
+
+  2. Propel the vehicle:
+
+      gz topic -t /model/tethys/joint/propeller_joint/cmd_thrust
+      -m gz.msgs.Double -p 'data: -31'
+
+-->
+<sdf version="1.6">
+  <world name="buoyant_tethys">
+    <scene>
+      <!-- For turquoise ambient -->
+      <ambient>0.0 1.0 1.0</ambient>
+      <background>0.0 0.7 0.8</background>
+    </scene>
+    
+
+    <physics name="1ms" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+      <uniform_fluid_density>1000</uniform_fluid_density>
+    </plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <include>
+      <pose>1 1 -50 0 0 1.57</pose>
+      <uri>https://fuel.gazebosim.org/1.0/accurrent/models/MBARI%20Tethys%20LRAUV</uri>
+    </include>
+    
+     <plugin name="gaussmarkov::UnderwaterCurrentPlugin" filename="libGaussMarkov.so">
+      <namespace>hydrodynamics</namespace>
+      <constant_current>
+        <topic>current_velocity</topic>
+        <velocity>
+          <mean>0</mean>
+          <min>0</min>
+          <max>5</max>
+          <mu>0.0</mu>
+          <noiseAmp>4</noiseAmp>
+        </velocity>
+
+        <horizontal_angle>
+          <mean>0</mean>
+          <min>-3.141592653589793238</min>
+          <max>3.141592653589793238</max>
+          <mu>0.0</mu>
+          <noiseAmp>0.0</noiseAmp>
+        </horizontal_angle>
+
+        <vertical_angle>
+          <mean>0</mean>
+          <min>-3.141592653589793238</min>
+          <max>3.141592653589793238</max>
+          <mu>0.0</mu>
+          <noiseAmp>0.0</noiseAmp>
+        </vertical_angle>
+      </constant_current>
+    </plugin>
+
+  </world>
+</sdf>

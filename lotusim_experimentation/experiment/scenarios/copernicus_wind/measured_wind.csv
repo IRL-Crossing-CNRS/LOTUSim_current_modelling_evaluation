@@ -1,0 +1,6 @@
+site,export_date,target_date,measured_u10_ms,measured_beaufort,fitted_u10_ms,fitted_beaufort,u10_ratio_measured_over_fitted
+brest,2023-11-02,2023-11-04,17.454,8,1.1863,1,14.71
+brest,2024-06-01,2024-06-03,4.908,3,0.4312,1,11.38
+brest,2024-07-29,2024-07-31,5.293,3,0.4427,1,11.96
+brest,2024-08-05,2024-08-07,4.609,3,0.7747,1,5.95
+brest,2024-10-01,2024-10-03,4.82,3,0.7921,1,6.09

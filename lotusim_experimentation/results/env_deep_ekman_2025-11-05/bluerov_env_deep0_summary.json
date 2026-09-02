@@ -1,0 +1,16 @@
+{
+  "agent": "bluerov_env_deep0",
+  "samples_total": 6082,
+  "samples_after_settle": 5782,
+  "settle_s": 15.0,
+  "duration_s": 304.05,
+  "rms_pos_error_m": 0.0482,
+  "max_pos_error_m": 0.2248,
+  "rms_cross_track_m": 0.0482,
+  "max_cross_track_m": 0.2248,
+  "rms_depth_error_m": 0.0412,
+  "mean_speed_ms": 0.1499,
+  "rms_control_effort_N": 5.5937,
+  "saturated_fraction": 0.0,
+  "energy_wh": 4.88641
+}

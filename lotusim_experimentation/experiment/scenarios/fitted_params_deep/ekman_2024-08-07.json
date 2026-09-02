@@ -1,0 +1,23 @@
+{
+  "date": "2024-08-07",
+  "source_profile": "copernicus_profiles_deep/brest_2024-08-07.csv",
+  "fitted": {
+    "current_velocity_ms": 0.1079,
+    "current_orientation_deg": 189.34,
+    "top_layer_thickness_m": 0.5,
+    "bottom_layer_thickness_m": 1.069,
+    "U10_ms": 2.5837
+  },
+  "held_fixed": {
+    "seabed_depth_m": 196.0,
+    "latitude_deg": 47.0,
+    "wind_orientation_deg": 20.0
+  },
+  "fit_rmse_ms": 0.09012,
+  "railed_parameters": [
+    "top",
+    "bot"
+  ],
+  "n_depth_samples": 24,
+  "_comment": "Corrected Ekman (rotation-consistent wind angle, rho not sqrt(rho)), fitted on the 0-150 m surface band."
+}

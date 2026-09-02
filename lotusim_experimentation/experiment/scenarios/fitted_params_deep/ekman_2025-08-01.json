@@ -1,0 +1,20 @@
+{
+  "date": "2025-08-01",
+  "source_profile": "copernicus_profiles_deep/brest_2025-08-01.csv",
+  "fitted": {
+    "current_velocity_ms": 0.0238,
+    "current_orientation_deg": 33.61,
+    "top_layer_thickness_m": 93.837,
+    "bottom_layer_thickness_m": 4.83,
+    "U10_ms": 11.6276
+  },
+  "held_fixed": {
+    "seabed_depth_m": 196.0,
+    "latitude_deg": 47.0,
+    "wind_orientation_deg": 20.0
+  },
+  "fit_rmse_ms": 0.07318,
+  "railed_parameters": [],
+  "n_depth_samples": 24,
+  "_comment": "Fit of xdyn's compiled `ekman current` model (ported exactly from EkmanUWCurrentModel.cpp) to the measured profile above, truncated to 0-150 m and fit unweighted. U10 is fitted, not pinned -- see this script's module docstring."
+}
